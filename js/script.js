@@ -22,8 +22,7 @@ const arrowLeft = document.querySelector('.portfolio-box .navigation .arrow-left
 let index = 0;
 const activePortfolio = () => {
     const imgSlide = document.querySelector('.portfolio-carousel .img-slide');
-    imgSlide.style
-    // imgSlide.style.transform = 'translateX(calc(${index * -100}% - ${index * 2}rem))';
+    imgSlide.style.transform = `translateX(calc(${index * -100}% - ${index * 2}rem))`;
 }
 
 arrowRight.addEventListener('click', () => {
