@@ -17,6 +17,8 @@
     --main-color: #7cf03d;
     --white-color: #fff;
     --disabled-color: #fff3;
+    --error-color: #d93025;
+    --blue-color: #0ef;
 }
 
 /* Tamaño del texto de la pagina en general */
@@ -609,6 +611,7 @@ section.active {
     width: 100%;
     height: 45rem;
     border-radius: 1rem;
+    overflow: hidden;
 }
 
 .portfolio-carousel .img-slide {
@@ -657,5 +660,138 @@ section.active {
     margin-left: 1.5rem;
 }
 
-
 /* ========== <!-- END PORTFOLIO SECTION --> ========== */
+
+
+/* ========== <!-- CONTACT SECTION --> ========== */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+}
+
+.contact-container .contact-box:first-child {
+    align-self: center;
+}
+
+.contact-box h2 {
+    font-size: 4.5rem;
+}
+
+.contact-box p {
+    font-size: 1.6rem;
+}
+
+.contact-box .desc {
+    margin: 1.5rem 0 2.5rem;
+}
+
+.contact-box .contact-detail {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.contact-detail i {
+    display: inline-flex;
+    background: var(--second-bg-color);
+    color: var(--main-color);
+    font-size: 3rem;
+    padding: 1.2rem;
+    border-radius: .6rem;
+    margin-right: 1.5rem;
+}
+
+.contact-detail .detail p:first-child {
+    color: var(--main-color);
+}
+
+.contact-box form {
+    background: var(--second-bg-color);
+    padding: 2.5rem 3.5rem 3.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.contact-box .heading {
+    font-size: 3.5rem;
+}
+
+.contact-box .field-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.contact-box .field-box input,
+.contact-box .field-box textarea {
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border: .15rem solid var(--bg-color);
+    border-radius: .6rem;
+    font-size: 1.6 rem;
+    color: var(--white-color);
+}
+
+.contact-box .field-box textarea {
+    grid-column: 1 / -1;
+    height: 26rem;
+    resize: none;
+}
+
+.contact-box .field-box input:focus,
+.contact-box .field-box textarea:focus {
+    border-color: var(--main-color);
+}
+
+.contact-box .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+/* ========== <!-- END CONTACT SECTION --> ========== */
+
+
+/* ========== <!-- FORM --> ========== */
+.contact form {
+    width: 64rem;
+    text-align: center;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field .item {
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    margin: 12px 0;
+}
+
+.field .item::placeholder {
+    color: var(--white-color);
+}
+
+form .textarea-field .item {
+    resize: none;
+}
+
+.field .error-txt {
+    color: var(--main-color);
+    font-size: 14px;
+    color: var(--error-color);
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+form .textarea-field .error-txt {
+    margin-top: -10px;
+}
