@@ -16,7 +16,7 @@
 <body>
 
     <!-- HEADER SECTION -->
-    <header>
+    <header class="active">
         <a href="#" class="logo">Jorge G.</a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
@@ -29,8 +29,19 @@
     </header>
     <!-- END HEADER SECTION -->
 
+    <!-- BARS BACKGROUND -->
+    <div class="bars-box active">
+        <div class="bar" style="--i:6;"></div>
+        <div class="bar" style="--i:5;"></div>
+        <div class="bar" style="--i:4;"></div>
+        <div class="bar" style="--i:3;"></div>
+        <div class="bar" style="--i:2;"></div>
+        <div class="bar" style="--i:1;"></div>
+    </div>
+    <!-- END BARS SECTION -->
+
     <!-- HOME SECTION -->
-    <section class="home">
+    <section class="home active">
         <div class="home-detail">
             <h1>Jorge Gámez</h1>
             <h2>Soy
@@ -447,7 +458,7 @@
     <!-- END PORTFOLIO SECTION -->
 
     <!-- CONTACT SECTION -->
-    <section class="contact active">
+    <section class="contact">
         <div class="contact-container">
             <div class="contact-box">
                 <h2>Contáctame</h2>
@@ -474,23 +485,8 @@
                     </div>
                 </div>
             </div>
-            <div class="contact-box">
-                <!-- <form action="#">
-                    <h2 class="heading">Mandame un <span>Mensaje</span></h2>
-                    <div class="field-box">
-                        <input type="text" id="name" class="item" placeholder="Nombre completo" required>
-                        <div class="error-text">Este campo no puede estar en blanco</div>
-                        <input type="email" id="email" class="item" placeholder="Correo" required>
-                        <div class="error-text">Este campo no puede estar en blanco</div>
-                        <input type="number" id="number" class="item" placeholder="Numero" required>
-                        <div class="error-text">Este campo no puede estar en blanco</div>
-                        <input type="text" id="subject" class="item" placeholder="Contacto" required>
-                        <div class="error-text">Este campo no puede estar en blanco</div>
-                        <textarea name="" id="" class="item" placeholder="Ingresa tu mensaje"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Enviar <i class='bx bx-send'></i></button>
-                </form> -->
 
+            <div class="contact-box">
                 <form action="#">
                     <div class="input-box">
                         <div class="input-field field">
@@ -499,7 +495,7 @@
                         </div>
                         <div class="input-field field">
                             <input type="text" placeholder="Correo" id="mail" class="item" autocomplete="off">
-                            <div class="error-txt">Campo obligatorio</div>
+                            <div class="error-txt mail">Campo obligatorio</div>
                         </div>
                     </div>
                     <div class="input-box">
@@ -526,6 +522,7 @@
     <!-- END CONTACT SECTION -->
 
     <script src="https://unpkg.com/smtp.js/dist/smtp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/script.js"></script>
 </body>
