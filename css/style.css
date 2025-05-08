@@ -242,7 +242,8 @@ section.active {
 
 .home-detail p {
   font-size: 1.6rem;
-  margin: 1rem 0 2.5rem;
+  margin-block: 1lh;
+  /* margin: 1rem 0 2.5rem; */
 }
 
 .home-detail .btn-sci {
@@ -433,6 +434,7 @@ section.active {
 
 .services-box p {
   font-size: 1.6rem;
+  margin-block: 1lh;
 }
 
 /* ========== <!-- END SERVICES SECTION --> ========== */
@@ -450,6 +452,8 @@ section.active {
 
 .about-box p {
   font-size: 1.6rem;
+  justify: justify;
+  text-align: justify;
 }
 
 .about-box .desc {
@@ -491,7 +495,7 @@ section.active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2rem;
-  height: 45rem;
+  height: 100%;
   overflow: auto;
 }
 
@@ -511,8 +515,8 @@ section.active {
 .about-list .about-item {
   background: var(--second-bg-color);
   border-radius: 0.8rem;
-  padding: 3rem 2.5rem;
-  height: calc((45rem - 2rem) / 2);
+  padding: 1rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -523,13 +527,13 @@ section.active {
 }
 
 .about-item h3 {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 .about-item .company {
   position: relative;
   margin-left: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 12px;
 }
 
 .about-item .company::before {
