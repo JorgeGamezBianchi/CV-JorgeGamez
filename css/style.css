@@ -615,15 +615,6 @@ section.active {
   font-size: 1.8rem;
 }
 
-/* ========== EXPERIENCIA: alineacion y proporcion ========== */
-/* La lista de experiencia se muestra en UNA sola columna (tarjetas de ancho
-   completo) para que todas las tarjetas queden alineadas al mismo nivel,
-   tengan el mismo ancho y el texto ocupe de forma proporcional el espacio
-   disponible, logrando un aspecto simetrico y ordenado. */
-.experiencie .about-list {
-  grid-template-columns: 1fr;
-}
-
 /* ========== <!-- END ABOUT SECTION --> ========== */
 
 /* ========== <!-- PORTFOLIO SECTION --> ========== */
