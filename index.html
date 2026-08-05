@@ -47,7 +47,6 @@
     <!-- HOME SECTION -->
     <section class="home active">
         <div class="home-detail">
-            <h1>Hola! Me llamo</h1>
             <h1>Jorge Gámez</h1>
             <h2>Soy
                 <span style="--i:4;" data-text="Desarrollador Full-Stack">Desarrollador Full-Stack</span>
@@ -74,7 +73,7 @@
         <div class="home-img">
             <div class="img-box">
                 <div class="img-item">
-                    <img src="resources/Foto-Formal-Perfil.jpg">
+                    <img src="resources/Foto-Formal-Perfil.jpg" alt="Foto de Jorge Gámez">
                 </div>
             </div>
         </div>
@@ -461,21 +460,7 @@
         <div class="contact-container">
             <div class="contact-box">
                 <h2>Contáctame</h2>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                <div class="contact-detail">
-                    <i class='bx bxs-phone'></i>
-                    <div class="detail">
-                        <p>Telefono:</p>
-                        <p>(55) 5555 - 5555</p>
-                    </div>
-                </div>
-                <div class="contact-detail">
-                    <i class='bx bxs-envelope'></i>
-                    <div class="detail">
-                        <p>Correo:</p>
-                        <p>REDACTED_EMAIL</p>
-                    </div>
-                </div>
+                <p class="desc">Trabajemos juntos!</p>
                 <div class="contact-detail">
                     <i class='bx bxs-map'></i>
                     <div class="detail">
@@ -483,19 +468,20 @@
                         <p>Cuautitlán, México</p>
                     </div>
                 </div>
+                <div class="sci">
+                    <a target="_blank" href="https://github.com/JorgeGamezBianchi"><i class='bx bxl-github'></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jorgegámez"><i class='bx bxl-linkedin'></i></a>
+                    <a target="_blank" href="#"><i class='bx bxl-twitter'></i></a>
+                    <a target="_blank" href="#"><i class='bx bxl-instagram'></i></a>
+                    <a target="_blank" href="#"><i class='bx bxl-facebook'></i></a>
+                </div>
             </div>
 
             <div class="contact-box">
                 <form action="#">
-                    <div class="input-box">
-                        <div class="input-field field">
-                            <input type="text" placeholder="Nombre" id="name" class="item" autocomplete="off">
-                            <div class="error-txt">Campo obligatorio</div>
-                        </div>
-                        <div class="input-field field">
-                            <input type="text" placeholder="Correo" id="mail" class="item" autocomplete="off">
-                            <div class="error-txt mail">Campo obligatorio</div>
-                        </div>
+                    <div class="input-field field">
+                        <input type="text" placeholder="Nombre" id="name" class="item" autocomplete="off">
+                        <div class="error-txt">Campo obligatorio</div>
                     </div>
                     <div class="input-box">
                         <div class="input-field field">
@@ -503,8 +489,8 @@
                             <div class="error-txt">Campo obligatorio</div>
                         </div>
                         <div class="input-field field">
-                            <input type="text" placeholder="Contacto" id="subject" class="item" autocomplete="off">
-                            <div class="error-txt">Campo obligatorio</div>
+                            <input type="text" placeholder="Correo" id="mail" class="item" autocomplete="off">
+                            <div class="error-txt mail">Campo obligatorio</div>
                         </div>
                     </div>
                     <div class="textarea-field field">
@@ -520,9 +506,8 @@
     </section>
     <!-- END CONTACT SECTION -->
 
-    <script src="https://unpkg.com/smtp.js/dist/smtp.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

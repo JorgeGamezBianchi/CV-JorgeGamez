@@ -124,33 +124,36 @@ const form = document.querySelector("form");
 const fullname = document.getElementById("name");
 const mail = document.getElementById("mail");
 const phon = document.getElementById("number");
-const subj = document.getElementById("subject");
 const mssg = document.getElementById("message");
 
-function sendEmail() {
-    const myEmail = 'REDACTED_EMAIL';
-    const bodyMsg = `Name: ${name.value}<br>Email: ${mail.value}<br>Phone: ${phon.value}<br> Message: ${mssg.value}`;
+emailjs.init("cOB2jIZA5NM0iW578");
 
-    Email.send({
-        //SecureToken : "008671e8-dde0-4d83-a578-e394d4a595b2",
-        Host : "smtp.elasticemail.com",
-        Username : "REDACTED_EMAIL",
-        Password : "REDACTED_SMTP_PASSWORD",
-        To : myEmail,
-        From : myEmail,
-        Subject : subj.value,
-        Body : bodyMsg
-    }).then(
-      message => {
-        if (message == "OK") {
+function sendEmail() {
+    const serviceID = "service_b0n2c86";
+    const templateID = "template_contacto";
+
+    const templateParams = {
+        from_name: fullname.value,
+        from_email: mail.value,
+        phone: phon.value,
+        message: mssg.value
+    };
+
+    emailjs.send(serviceID, templateID, templateParams)
+        .then(() => {
             Swal.fire({
                 title: "Mensaje enviado!",
                 text: "Muchas gracias, me comunicare contigo lo más pronto posible!",
                 icon: "success"
             });
-        }
-      }
-    );
+        })
+        .catch((error) => {
+            Swal.fire({
+                title: "Error",
+                text: "No se pudo enviar el mensaje. Inténtalo de nuevo.",
+                icon: "error"
+            });
+        });
 }
 
 function validateForm() {
@@ -208,7 +211,7 @@ form.addEventListener("submit", (e) => {
     validateForm();
 
     if (!fullname.classList.contains("error") && !mail.classList.contains("error") && !phon.classList.contains("error") &&
-        !subj.classList.contains("error") && !mssg.classList.contains("error")) {
+        !mssg.classList.contains("error")) {
             //console.log('OK');
             sendEmail();
 
