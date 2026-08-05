@@ -1,5 +1,4 @@
 const tabNav = document.querySelectorAll('header nav a');
-const logo = document.querySelector('.logo');
 const sections = document.querySelectorAll('section');
 const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.querySelector('header nav');
@@ -54,49 +53,44 @@ const activePage = () => {
     navbar.classList.remove('active');
 }
 
-tabNav.forEach((link, idx) => {
-    link.addEventListener('click', () => {
-        if (!link.classList.contains('active')) {
+const routes = {
+    'inicio': 0,
+    'servicios': 1,
+    'about': 2,
+    'portfolio': 3,
+    'contact': 4,
+};
 
-            activePage();
+const hashToIndex = (hash) => {
+    const path = hash.replace(/^#\/?/, '').toLowerCase();
+    return routes[path] !== undefined ? routes[path] : 0;
+};
 
-            link.classList.add('active');
+const goTo = (index) => {
+    activePage();
 
-            setTimeout(() => {
-                sections[idx].classList.add('active');
-            }, 1000);
-        }
-    });
-});
+    tabNav[index].classList.add('active');
 
-logo.addEventListener('click', () => {
-    if (!tabNav[0].classList.contains('active')) {
+    setTimeout(() => {
+        sections[index].classList.add('active');
+        window.scrollTo(0, 0);
+    }, 1000);
+};
 
-        activePage();
+const handleHash = () => {
+    const index = hashToIndex(location.hash);
 
-        tabNav[0].classList.add('active');
+    if (tabNav[index].classList.contains('active')) return;
 
-        setTimeout(() => {
-            sections[0].classList.add('active');
-        }, 1000);
-    }  
-});
+    goTo(index);
+};
 
-const contactBtn = document.getElementById('contact-btn');
-contactBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+window.addEventListener('hashchange', handleHash);
 
-    if (!tabNav[4].classList.contains('active')) {
-
-        activePage();
-
-        tabNav[4].classList.add('active');
-
-        setTimeout(() => {
-            sections[4].classList.add('active');
-        }, 1000);
-    }
-});
+const initialIndex = hashToIndex(location.hash);
+if (initialIndex !== 0) {
+    goTo(initialIndex);
+}
 
 const aboutBtns = document.querySelectorAll('.about-btn');
 aboutBtns.forEach((btn, idx) => {
