@@ -4,6 +4,25 @@ const sections = document.querySelectorAll('section');
 const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.querySelector('header nav');
 
+const BIRTH_DATE = new Date('1993-02-11');
+const WORK_START_DATE = new Date('2022-02-01');
+
+function calcYearsSince(date) {
+    const now = new Date();
+    let years = now.getFullYear() - date.getFullYear();
+    const anniversaryPassed =
+        now.getMonth() > date.getMonth() ||
+        (now.getMonth() === date.getMonth() && now.getDate() >= date.getDate());
+    if (!anniversaryPassed) years--;
+    return years;
+}
+
+const ageEl = document.getElementById('age');
+const expEl = document.getElementById('experience');
+
+ageEl.textContent = `${calcYearsSince(BIRTH_DATE)} años`;
+expEl.textContent = `${calcYearsSince(WORK_START_DATE)}+ años`;
+
 menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
@@ -61,6 +80,22 @@ logo.addEventListener('click', () => {
             sections[0].classList.add('active');
         }, 1000);
     }  
+});
+
+const contactBtn = document.getElementById('contact-btn');
+contactBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (!tabNav[4].classList.contains('active')) {
+
+        activePage();
+
+        tabNav[4].classList.add('active');
+
+        setTimeout(() => {
+            sections[4].classList.add('active');
+        }, 1000);
+    }
 });
 
 const aboutBtns = document.querySelectorAll('.about-btn');

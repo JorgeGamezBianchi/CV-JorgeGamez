@@ -9,6 +9,9 @@
     <!--Boxicons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
+    <!--Devicon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
     <!--MyCustom CSS-->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,8 +25,8 @@
 
         <nav class="navbar">
             <a href="#" class="active">Inicio</a>
-            <a href="#">Servicios</a>
             <a href="#">Sobre mi</a>
+            <a href="#">Servicios</a>
             <a href="#">Portfolio</a>
             <a href="#">Contacto</a>
         </nav>
@@ -79,6 +82,294 @@
         </div>
     </section>
     <!-- END HOME SECTION -->
+
+    <!-- ABOUT SECTION -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-box">
+                <h2>Porque trabajar juntos?</h2>
+                <p class="desc">Porque combino experiencia técnica sólida con capacidad de resolver problemas reales de
+                    negocio</p>
+                <button class="about-btn active">Experiencia</button>
+                <button class="about-btn">Educación</button>
+                <button class="about-btn">Habilidades</button>
+                <button class="about-btn">Sobre mí</button>
+            </div>
+
+            <div class="about-box">
+                <div class="about-detail experiencie active">
+                    <h2 class="heading">Mi <span>Experiencia</span></h2>
+                    <p class="desc">Tengo 4+ años desarrollando sistemas ERP y CRM empresariales con ASP.NET MVC, C#,
+                        Entity Framework y SQL Server, lo que me ha dado experiencia directa en proyectos de alta
+                        complejidad y criticidad operativa.
+
+                        Además, estoy en constante evolución: actualmente profundizo en Clean Architecture y CQRS para
+                        escribir código más mantenible y escalable, y complemento mi perfil técnico con formación en
+                        Habilidades Directivas, lo que me permite no solo programar, sino entender el impacto de negocio
+                        detrás de cada solución.</p>
+                    <div class="about-list">
+                        <!-- ============ Empleo 1: ASF Softlution (trabajo actual) ============ -->
+                        <div class="about-item">
+                            <p class="year">Sep 2023 - Actual</p>
+                            <h3>Desarrollador .NET Full-Stack</h3>
+                            <p class="company">ASF Softlution</p>
+                            <p>• Desarrollo Front-End y Back-End con arquitectura ASP.NET MVC en entornos productivos.
+                                • Implementación y prueba de nuevos módulos con Entity Framework 6 (EF6), LINQ y ADO.NET
+                                sobre SQL Server.
+                                • Optimización de base de datos productiva mediante Stored Procedures y ajuste de
+                                queries, logrando una mejora de rendimiento del 20%.
+                                • Refactorización de código legacy aplicando principios SOLID.
+                                • Mantenimiento y mejora de aplicación móvil Android (Kotlin / Jetpack Compose).
+                                • Integración de herramientas de Inteligencia Artificial (Claude Code, Gemini CLI) para
+                                automatizar y acelerar flujos de trabajo internos.
+                                • Gestión y administración directa de base de datos en ambiente productivo (SQL Server).
+                            </p>
+                        </div>
+                        <!-- ============ Empleo 2: Med Marketing ============ -->
+                        <div class="about-item">
+                            <p class="year">Ago 2022 - Jul 2023</p>
+                            <h3>Desarrollador .NET Jr.</h3>
+                            <p class="company">Med Marketing</p>
+                            <p>• Desarrollo Full-Stack de módulos para sistemas CRM y ERP empresarial con ASP.NET MVC y
+                                C#.
+                                • Diseño e implementación de Stored Procedures, Triggers y Vistas en SQL Server,
+                                optimizando el rendimiento de queries en un 30% y garantizando la integridad de los
+                                datos.
+                                • Implementación de REST APIs para integración entre sistemas internos y terceros.
+                                • Atención de incidencias de producción, análisis de causa raíz y entrega de mejoras
+                                según requerimientos de usuarios finales.
+                                • Cobertura de pruebas funcionales en nuevos módulos previo a pase a producción.</p>
+                        </div>
+                        <!-- ============ Empleo 3: Transportes Medrano ============ -->
+                        <div class="about-item">
+                            <p class="year">Feb 2022 - Ago 2022</p>
+                            <h3>Desarrollador Becario</h3>
+                            <p class="company">Transportes Medrano</p>
+                            <p>• Desarrollo de módulos personalizados en .NET para distintas áreas del negocio.
+                                • Diseño y mantenimiento de REST APIs para integración entre sistemas.
+                                • Desarrollo y mantenimiento de aplicaciones móviles Android con Flutter y Dart.
+                                • Creación de Stored Procedures para gestión eficiente de operaciones CRUD.
+                                • Aplicación de buenas prácticas de Clean Code y versionamiento con Git / GitHub.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-detail education">
+                    <h2 class="heading">Mi <span>Educación</span></h2>
+                    <!-- <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat.</p> -->
+                    <div class="about-list">
+                        <div class="about-item">
+                            <p class="year">2025</p>
+                            <h3>Maestría en Habilidades Directivas</h3>
+                            <p class="company">Universidad Mexicana</p>
+                        </div>
+                        <div class="about-item">
+                            <p class="year">2024 - 2025</p>
+                            <h3>Especialidad en Habilidades Directivas</h3>
+                            <p class="company">Universidad Mexicana</p>
+                        </div>
+                        <div class="about-item">
+                            <p class="year">2020 - 2023</p>
+                            <h3>Licenciatura en Sistemas Computacionales</h3>
+                            <p class="company">Universidad Mexicana</p>
+                        </div>
+                        <div class="about-item">
+                            <p class="year">2008 - 2011</p>
+                            <h3>Bachillerato Técnico en Programación</h3>
+                            <p class="company">Universidad Bancaria de México</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-detail skills">
+                    <h2 class="heading">Mis <span>Habilidades</span></h2>
+
+                    <div class="skills-group">
+                        <h3 class="skills-title">Backend / .NET</h3>
+                        <div class="about-list">
+                            <div class="about-item">
+                                <i class="devicon-csharp-plain colored"></i>
+                                <span>C#</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-dotnetcore-plain colored"></i>
+                                <span>.NET / ASP.NET</span>
+                            </div>
+                        </div>
+                        <div class="skills-chips">
+                            <span>Entity Framework</span>
+                            <span>LINQ</span>
+                            <span>ADO.NET</span>
+                            <span>Web API</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3 class="skills-title">Frontend</h3>
+                        <div class="about-list">
+                            <div class="about-item">
+                                <i class="devicon-html5-plain colored"></i>
+                                <span>HTML 5</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-css3-plain colored"></i>
+                                <span>CSS 3</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-bootstrap-plain colored"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-jquery-plain colored"></i>
+                                <span>jQuery</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-react-original colored"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-angular-plain colored"></i>
+                                <span>Angular</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3 class="skills-title">Bases de Datos</h3>
+                        <div class="about-list">
+                            <div class="about-item">
+                                <i class="devicon-microsoftsqlserver-plain colored"></i>
+                                <span>MS SQL Server</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-mysql-plain colored"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-postgresql-plain colored"></i>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                        <div class="skills-chips">
+                            <span>Stored Procedures</span>
+                            <span>Triggers</span>
+                            <span>Vistas</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3 class="skills-title">Arquitectura / Patrones</h3>
+                        <div class="skills-chips">
+                            <span>MVC</span>
+                            <span>REST API</span>
+                            <span>SOLID</span>
+                            <span>Clean Code</span>
+                            <span>Code Refactoring</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3 class="skills-title">Mobile</h3>
+                        <div class="about-list">
+                            <div class="about-item">
+                                <i class="devicon-kotlin-plain colored"></i>
+                                <span>Kotlin</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-flutter-plain colored"></i>
+                                <span>Flutter</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-dart-plain colored"></i>
+                                <span>Dart</span>
+                            </div>
+                        </div>
+                        <div class="skills-chips">
+                            <span>Jetpack Compose</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3 class="skills-title">DevOps / Herramientas</h3>
+                        <div class="about-list">
+                            <div class="about-item">
+                                <i class="devicon-git-plain colored"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-github-original colored"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-postman-plain colored"></i>
+                                <span>Postman</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-visualstudio-plain colored"></i>
+                                <span>Visual Studio</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-vscode-plain colored"></i>
+                                <span>VS Code</span>
+                            </div>
+                            <div class="about-item">
+                                <i class="devicon-docker-plain colored"></i>
+                                <span>Docker</span>
+                            </div>
+                        </div>
+                        <div class="skills-chips">
+                            <span>IIS</span>
+                            <span>n8n</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group">
+                        <h3 class="skills-title">AI Tools</h3>
+                        <div class="skills-chips">
+                            <span>Claude Code</span>
+                            <span>Gemini CLI</span>
+                            <span>OpenCode</span>
+                            <span>Antigravity CLI</span>
+                            <span>Ollama</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-detail aboutMe">
+                    <h2 class="heading">Sobre <span>Mi</span></h2>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat.</p>
+                    <div class="about-list">
+                        <div class="about-item">
+                            <p>Nombre: <span>Jorge A. Gámez Bianchi</span></p>
+                        </div>
+                        <div class="about-item">
+                            <p>Edad: <span id="age">33 años</span></p>
+                        </div>
+                        <div class="about-item">
+                            <p>Estado Civil: <span>Casado</span></p>
+                        </div>
+                        <div class="about-item">
+                            <p>Ciudad: <span>Cuautitlán, México</span></p>
+                        </div>
+                        <div class="about-item">
+                            <p>Experiencia: <span id="experience">4+ años</span></p>
+                        </div>
+                        <div class="about-item">
+                            <p>Freelance <span>Disponible</span></p>
+                        </div>
+                    </div>
+                    <div class="aboutMe-btn">
+                        <a href="#" class="btn" id="contact-btn">Contáctame</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END ABOUT SECTION -->
 
     <!-- SERVICES SECTION -->
     <section class="services">
@@ -152,185 +443,6 @@
         </div>
     </section>
     <!-- END SERVICES SECTION -->
-
-    <!-- ABOUT SECTION -->
-    <section class="about">
-        <div class="about-container">
-            <div class="about-box">
-                <h2>Porque contratarme?</h2>
-                <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat.</p>
-                <button class="about-btn active">Experiencia</button>
-                <button class="about-btn">Educación</button>
-                <button class="about-btn">Habilidades</button>
-                <button class="about-btn">Sobre mí</button>
-            </div>
-
-            <div class="about-box">
-                <div class="about-detail experiencie active">
-                    <h2 class="heading">Mi <span>Experiencia</span></h2>
-                    <!-- Descripcion general: texto tomado del perfil profesional del CV -->
-                    <p class="desc">Desarrollador Full-Stack .NET con más de 3 años de experiencia en el diseño,
-                        desarrollo y mantenimiento de sistemas ERP y CRM empresariales.</p>
-                    <div class="about-list">
-                        <!-- ============ Empleo 1: ASF Softlution (trabajo actual) ============ -->
-                        <div class="about-item">
-                            <p class="year">Sep 2023 - Actual</p>
-                            <h3>Desarrollador .NET Full-Stack</h3>
-                            <p class="company">ASF Softlution</p>
-                            <!-- Cada viñeta (•) es una responsabilidad tomada del CV -->
-                            <p>• Desarrollo Front-End y Back-End con arquitectura ASP.NET MVC en entornos productivos.
-                                • Implementación y prueba de nuevos módulos con Entity Framework 6 (EF6), LINQ y ADO.NET
-                                sobre SQL Server.
-                                • Optimización de base de datos productiva mediante Stored Procedures y ajuste de
-                                queries, logrando una mejora de rendimiento del 20%.
-                                • Refactorización de código legacy aplicando principios SOLID.
-                                • Mantenimiento y mejora de aplicación móvil Android (Kotlin / Jetpack Compose).
-                                • Integración de herramientas de Inteligencia Artificial (Claude Code, Gemini CLI) para
-                                automatizar y acelerar flujos de trabajo internos.
-                                • Gestión y administración directa de base de datos en ambiente productivo (SQL Server).
-                            </p>
-                        </div>
-                        <!-- ============ Empleo 2: Med Marketing ============ -->
-                        <div class="about-item">
-                            <p class="year">Ago 2022 - Jul 2023</p>
-                            <h3>Desarrollador .NET Jr.</h3>
-                            <p class="company">Med Marketing</p>
-                            <p>• Desarrollo Full-Stack de módulos para sistemas CRM y ERP empresarial con ASP.NET MVC y
-                                C#.
-                                • Diseño e implementación de Stored Procedures, Triggers y Vistas en SQL Server,
-                                optimizando el rendimiento de queries en un 30% y garantizando la integridad de los
-                                datos.
-                                • Implementación de REST APIs para integración entre sistemas internos y terceros.
-                                • Atención de incidencias de producción, análisis de causa raíz y entrega de mejoras
-                                según requerimientos de usuarios finales.
-                                • Cobertura de pruebas funcionales en nuevos módulos previo a pase a producción.</p>
-                        </div>
-                        <!-- ============ Empleo 3: Transportes Medrano ============ -->
-                        <div class="about-item">
-                            <p class="year">Feb 2022 - Ago 2022</p>
-                            <h3>Desarrollador Becario</h3>
-                            <p class="company">Transportes Medrano</p>
-                            <p>• Desarrollo de módulos personalizados en .NET para distintas áreas del negocio.
-                                • Diseño y mantenimiento de REST APIs para integración entre sistemas.
-                                • Desarrollo y mantenimiento de aplicaciones móviles Android con Flutter y Dart.
-                                • Creación de Stored Procedures para gestión eficiente de operaciones CRUD.
-                                • Aplicación de buenas prácticas de Clean Code y versionamiento con Git / GitHub.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-detail education">
-                    <h2 class="heading">Mi <span>Educación</span></h2>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat.</p>
-                    <div class="about-list">
-                        <div class="about-item">
-                            <p class="year">2024 - presente</p>
-                            <h3>Maestria</h3>
-                            <p class="company">UNIMEX</p>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore labore earum aut, hic
-                                qui voluptatum quasi aliquam minima praesentium!
-                            </p>
-                        </div>
-                        <div class="about-item">
-                            <p class="year">2020 - 2023</p>
-                            <h3>Lic. Sistemas Computacionales</h3>
-                            <p class="company">UNIMEX</p>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore labore earum aut, hic
-                                qui voluptatum quasi aliquam minima praesentium!
-                            </p>
-                        </div>
-                        <div class="about-item">
-                            <p class="year">2008 - 2011</p>
-                            <h3>Bachiretao técnico en Programación</h3>
-                            <p class="company">UBAM</p>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore labore earum aut, hic
-                                qui voluptatum quasi aliquam minima praesentium!
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-detail skills">
-                    <h2 class="heading">Mis <span>Habilidades</span></h2>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat.</p>
-                    <div class="about-list">
-                        <div class="about-item">
-                            <!-- <i class='bx bxl-html5'></i> -->
-                            <img src="resources/html5.png">
-                            <span>HTML 5</span>
-                        </div>
-                        <div class="about-item">
-                            <!-- <i class='bx bxl-css3'></i> -->
-                            <img src="resources/css.png">
-                            <span>CSS</span>
-                        </div>
-                        <div class="about-item">
-                            <!-- <i class='bx bxl-javascript'></i> -->
-                            <img src="resources/js.png">
-                            <span>Javascript</span>
-                        </div>
-                        <div class="about-item">
-                            <!-- <i class='bx bxl-html5'></i> -->
-                            <img src="resources/bootstrap.png">
-                            <span>Bootstrap</span>
-                        </div>
-                        <div class="about-item">
-                            <!-- <i class='bx bxl-html5'></i> -->
-                            <img src="resources/c-sharp.png">
-                            <span>C#</span>
-                        </div>
-                        <div class="about-item">
-                            <!-- <i class='bx bxl-html5'></i> -->
-                            <img src="resources/servidor-sql.png">
-                            <span>MS SQL Server</span>
-                        </div>
-                        <div class="about-item">
-                            <!-- <i class='bx bxl-css3'></i> -->
-                            <img src="resources/html5.png">
-                            <span>HTML 5</span>
-                        </div>
-                        <div class="about-item">
-                            <!-- <i class='bx bxl-css3'></i> -->
-                            <img src="resources/html5.png">
-                            <span>HTML 5</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-detail aboutMe">
-                    <h2 class="heading">Sobre <span>Mi</span></h2>
-                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, repellat.</p>
-                    <div class="about-list">
-                        <div class="about-item">
-                            <p>Nombre: <span>Jorge Gámez</span></p>
-                        </div>
-                        <div class="about-item">
-                            <p>Edad: <span>32 años</span></p>
-                        </div>
-                        <div class="about-item">
-                            <p>Estado Civil: <span>Casado</span></p>
-                        </div>
-                        <div class="about-item">
-                            <p>Ciudad: <span>Cuautitlán, México</span></p>
-                        </div>
-                        <div class="about-item">
-                            <p>Experiencia: <span>4+ años</span></p>
-                        </div>
-                        <div class="about-item">
-                            <p>Freelance <span>Disponible</span></p>
-                        </div>
-                        <div class="about-item">
-                            <p>Número: <span>(+52) 55 - 5555 - 5555</span></p>
-                        </div>
-                        <div class="about-item">
-                            <p>Correo: <span>REDACTED_EMAIL</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- END ABOUT SECTION -->
 
     <!-- PORTFOLIO SECTION -->
     <section class="portfolio">

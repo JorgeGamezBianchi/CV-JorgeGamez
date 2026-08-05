@@ -516,25 +516,32 @@ section.active {
 .about-list .about-item {
   background: var(--second-bg-color);
   border-radius: 0.8rem;
-  padding: 1rem;
+  padding: 1.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .about-item .year {
   color: var(--main-color);
+  margin: 0 0 0.5rem;
 }
 
 .about-item h3 {
   font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.about-item p {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .about-item .company {
   position: relative;
   margin-left: 2rem;
-  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
 }
 
 .about-item .company::before {
@@ -548,10 +555,46 @@ section.active {
   margin-left: -2rem;
 }
 
+.about-detail.experiencie .about-list {
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
+
 .about-detail.skills .about-list {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   height: auto;
   overflow: visible;
+}
+
+.skills-group {
+  margin-bottom: 3rem;
+}
+
+.skills-group:last-child {
+  margin-bottom: 0;
+}
+
+.skills-title {
+  font-size: 2rem;
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.skills-chips span {
+  background: var(--second-bg-color);
+  border: 0.1rem solid var(--main-color);
+  color: var(--white-color);
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
 }
 
 .about-detail.skills .about-item {
@@ -614,6 +657,15 @@ section.active {
   color: var(--white-color);
   margin-left: 1rem;
   font-size: 1.8rem;
+}
+
+.about-detail.aboutMe .aboutMe-btn {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.about-detail.aboutMe .aboutMe-btn .btn {
+  font-size: 1.6rem;
 }
 
 /* ========== <!-- END ABOUT SECTION --> ========== */
@@ -931,6 +983,10 @@ form .textarea-field .error-txt {
 
   section {
     padding: 10rem 4% 2rem;
+  }
+
+  .about-detail.experiencie .about-list {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 }
 
