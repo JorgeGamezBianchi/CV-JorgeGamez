@@ -55,8 +55,8 @@ const activePage = () => {
 
 const routes = {
     'inicio': 0,
-    'servicios': 1,
-    'about': 2,
+    'about': 1,
+    'servicios': 2,
     'portfolio': 3,
     'contact': 4,
 };
