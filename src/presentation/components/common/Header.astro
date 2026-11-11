@@ -1,0 +1,29 @@
+---
+/**
+ * @file Header.astro
+ * @description Encabezado principal de la aplicación con logotipo y barra de navegación SPA.
+ * Capa: Presentation / Components / Common
+ */
+
+import { siteConfig } from '../../../core/config/site.config';
+import { profileData } from '../../../infrastructure/data/profile.data';
+---
+
+<header class="active" id="main-header">
+  <a href="#/inicio" class="logo" aria-label="Volver al inicio">{profileData.shortName}</a>
+  <i class="bx bx-menu" id="menu-icon" role="button" aria-label="Abrir menú de navegación" tabindex="0"></i>
+
+  <nav class="navbar" aria-label="Navegación principal">
+    {
+      siteConfig.routes.map((route, idx) => (
+        <a
+          href={route.href}
+          class={idx === 0 ? 'active' : ''}
+          data-route={route.id}
+        >
+          {route.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>

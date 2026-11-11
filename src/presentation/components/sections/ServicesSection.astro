@@ -1,0 +1,29 @@
+---
+/**
+ * @file ServicesSection.astro
+ * @description Sección de Servicios que muestra las soluciones técnicas y de consultoría ofrecidas.
+ * Capa: Presentation / Components / Sections
+ */
+
+import { servicesData } from '../../../infrastructure/data/services.data';
+---
+
+<section class="services" id="servicios" data-section-index="2">
+  <h2 class="heading">Mis <span>Servicios</span></h2>
+  <div class="services-container">
+    {
+      servicesData.map((service) => (
+        <div class="services-box" id={`service-${service.id}`}>
+          <div class="icon">
+            <i class={service.iconClass} />
+            <a href={service.actionUrl || '#/contact'} aria-label={`Solicitar servicio de ${service.title}`}>
+              <i class="bx bx-arrow-back" />
+            </a>
+          </div>
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

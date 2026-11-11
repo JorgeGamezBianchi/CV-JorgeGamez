@@ -1,0 +1,51 @@
+---
+/**
+ * @file ContactSection.astro
+ * @description Sección de Contacto con ubicación, canales de comunicación y formulario directo.
+ * Capa: Presentation / Components / Sections / Contact
+ */
+
+import { profileData } from '../../../../infrastructure/data/profile.data';
+import ContactForm from './ContactForm.astro';
+---
+
+<section class="contact" id="contact" data-section-index="4">
+  <div class="contact-container">
+    <div class="contact-box">
+      <h2>Contáctame</h2>
+      <p class="desc">¡Trabajemos juntos!</p>
+      
+      <div class="contact-detail">
+        <i class="bx bxs-map" />
+        <div class="detail">
+          <p>Dirección:</p>
+          <p>{profileData.details.location}</p>
+        </div>
+      </div>
+
+      <!-- Enlaces sociales protegidos contra tabnabbing -->
+      <div class="sci">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/JorgeGamezBianchi"
+          aria-label="GitHub de Jorge Gámez"
+        >
+          <i class="bx bxl-github" />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/jorgegámez"
+          aria-label="LinkedIn de Jorge Gámez"
+        >
+          <i class="bx bxl-linkedin" />
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <ContactForm />
+    </div>
+  </div>
+</section>

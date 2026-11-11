@@ -1,0 +1,74 @@
+---
+/**
+ * @file Layout.astro
+ * @description Layout maestro de la aplicación con configuración SEO, metadatos, fuentes y seguridad.
+ * Capa: Presentation / Layouts
+ */
+
+import { siteConfig } from '../../core/config/site.config';
+import '../../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title = siteConfig.title,
+  description = siteConfig.description,
+  canonicalUrl = siteConfig.url
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={siteConfig.defaultLanguage}>
+  <head>
+    <!-- Metadatos Básicos y Codificación -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Título y Descripción SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={siteConfig.author.name} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Favicon e Iconografía -->
+    <link rel="icon" type="image/png" href="/resources/cv-icono.png" />
+    <meta name="theme-color" content={siteConfig.themeColor} />
+
+    <!-- Open Graph / Redes Sociales (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${canonicalUrl}/resources/Foto-Formal-Perfil.jpg`} />
+    <meta property="og:locale" content={siteConfig.locale} />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${canonicalUrl}/resources/Foto-Formal-Perfil.jpg`} />
+
+    <!-- Boxicons (Iconos de UI y redes) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Devicon (Iconos oficiales de lenguajes y frameworks) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Contenedor principal de la aplicación -->
+    <slot />
+  </body>
+</html>

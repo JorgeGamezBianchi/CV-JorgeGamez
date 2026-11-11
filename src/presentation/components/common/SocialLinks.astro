@@ -1,0 +1,31 @@
+---
+/**
+ * @file SocialLinks.astro
+ * @description Componente reutilizable para enlaces a redes sociales con atributos de seguridad estrictos.
+ * Capa: Presentation / Components / Common
+ */
+
+import type { SocialLink } from '../../../core/domain/profile.model';
+
+interface Props {
+  links: readonly SocialLink[];
+  className?: string;
+}
+
+const { links, className = 'sci' } = Astro.props;
+---
+
+<div class={className}>
+  {
+    links.map((link) => (
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={link.ariaLabel}
+      >
+        <i class={link.iconClass}></i>
+      </a>
+    ))
+  }
+</div>

@@ -1,0 +1,46 @@
+---
+/**
+ * @file index.astro
+ * @description Página principal del portfolio profesional migrado a Astro con Clean Architecture.
+ * Ensambla los componentes semánticos y carga los scripts interactivos del cliente.
+ * Capa: Pages / Entrypoint
+ */
+
+import Layout from '../presentation/layouts/Layout.astro';
+import Header from '../presentation/components/common/Header.astro';
+import BarsBackground from '../presentation/components/common/BarsBackground.astro';
+import HomeSection from '../presentation/components/sections/HomeSection.astro';
+import AboutSection from '../presentation/components/sections/about/AboutSection.astro';
+import ServicesSection from '../presentation/components/sections/ServicesSection.astro';
+import PortfolioSection from '../presentation/components/sections/portfolio/PortfolioSection.astro';
+import ContactSection from '../presentation/components/sections/contact/ContactSection.astro';
+---
+
+<Layout>
+  <!-- Encabezado fijo con logotipo y navegación -->
+  <Header />
+
+  <!-- Fondo animado de barras para transiciones visuales de sección -->
+  <BarsBackground />
+
+  <!-- SECCIONES DE LA APLICACIÓN (SPA) -->
+  <main id="main-content">
+    <!-- Sección Inicio / Hero -->
+    <HomeSection />
+
+    <!-- Sección Sobre mí con pestañas interactivas -->
+    <AboutSection />
+
+    <!-- Sección Servicios ofrecidos -->
+    <ServicesSection />
+
+    <!-- Sección Portfolio con carrusel de proyectos -->
+    <PortfolioSection />
+
+    <!-- Sección Contacto con formulario validado -->
+    <ContactSection />
+  </main>
+
+  <!-- Script de interactividad del cliente (Navigation, Tabs, Carousel, EmailJS, SweetAlert2) -->
+  <script src="../presentation/scripts/app.ts"></script>
+</Layout>

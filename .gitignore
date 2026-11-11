@@ -1,20 +1,54 @@
-# Variables de entorno / secretos
+# ==============================================================================
+# SEGURIDAD Y PROTECCIÓN DE SECRETOS (CRÍTICO)
+# ==============================================================================
+# Variables de entorno y llaves privadas
 .env
 .env.*
+!.env.example
+*.env
 *.local
 *.pem
 *.key
+*.cert
+*.crt
+*.pfx
+*.p12
+id_rsa*
+*.pub
 
-# Dependencias y build
+# Archivos de credenciales y tokens
+credentials.json
+token.json
+secrets.*
+
+# ==============================================================================
+# ASTRO Y DEPENDENCIAS DE CONSTRUCCIÓN
+# ==============================================================================
 node_modules/
 dist/
 build/
+.astro/
 
-# Configuración local de editor
-.vscode/
+# Logs y trazas de depuración
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# ==============================================================================
+# ENTORNO DE DESARROLLO Y SISTEMA OPERATIVO
+# ==============================================================================
+# Visual Studio Code & JetBrains
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 .idea/
 *.swp
+*.swo
 
-# Sistema operativo
+# Archivos basura del sistema operativo
 .DS_Store
 Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini

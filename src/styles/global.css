@@ -1096,3 +1096,27 @@ form .textarea-field .error-txt {
     font-size: 3.5rem;
   }
 }
+
+/* ==============================================================================
+   SEGURIDAD & MEJORAS DE ACCESIBILIDAD
+   ============================================================================== */
+/* Campo trampa antispam (Honeypot): invisible para humanos pero detectable por bots */
+.honeypot-field {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Estado de envío en curso en el botón de contacto */
+.btn.is-submitting {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+

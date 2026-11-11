@@ -1,0 +1,90 @@
+---
+/**
+ * @file ContactForm.astro
+ * @description Formulario de contacto con validaciones de seguridad, protección Honeypot antispam
+ * y prevención de ataques de inyección.
+ * Capa: Presentation / Components / Sections / Contact
+ */
+---
+
+<form id="contact-form" novalidate>
+  <!-- CAMPO HONEYPOT (SEGURIDAD ANTISPAM): Oculto para usuarios legítimos, visible para bots -->
+  <div class="honeypot-field" aria-hidden="true">
+    <label for="company_security_code">No rellenar este campo si eres humano</label>
+    <input
+      type="text"
+      id="company_security_code"
+      name="company_security_code"
+      tabindex="-1"
+      autocomplete="off"
+    />
+  </div>
+
+  <!-- Campo Nombre -->
+  <div class="input-field field">
+    <input
+      type="text"
+      placeholder="Nombre"
+      id="name"
+      name="fullName"
+      class="item"
+      autocomplete="name"
+      maxlength="80"
+      required
+    />
+    <div class="error-txt">Campo obligatorio</div>
+  </div>
+
+  <div class="input-box">
+    <!-- Campo Teléfono -->
+    <div class="input-field field">
+      <input
+        type="tel"
+        placeholder="Número"
+        id="number"
+        name="phone"
+        class="item"
+        autocomplete="tel"
+        maxlength="20"
+        required
+      />
+      <div class="error-txt">Campo obligatorio</div>
+    </div>
+
+    <!-- Campo Correo -->
+    <div class="input-field field">
+      <input
+        type="email"
+        placeholder="Correo"
+        id="mail"
+        name="email"
+        class="item"
+        autocomplete="email"
+        maxlength="100"
+        required
+      />
+      <div class="error-txt mail">Campo obligatorio</div>
+    </div>
+  </div>
+
+  <!-- Campo Mensaje -->
+  <div class="textarea-field field">
+    <textarea
+      placeholder="Mensaje"
+      id="message"
+      name="message"
+      class="item"
+      autocomplete="off"
+      cols="30"
+      rows="10"
+      maxlength="2000"
+      required
+    ></textarea>
+    <div class="error-txt">Campo obligatorio</div>
+  </div>
+
+  <!-- Botón de Envío -->
+  <button type="submit" class="btn" id="submit-btn" aria-label="Enviar formulario de contacto">
+    <span class="btn-text">Enviar</span> <i class="bx bx-send" />
+  </button>
+</form>

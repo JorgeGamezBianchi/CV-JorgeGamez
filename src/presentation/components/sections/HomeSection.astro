@@ -1,0 +1,55 @@
+---
+/**
+ * @file HomeSection.astro
+ * @description Sección de Inicio (Hero) con presentación del autor, títulos dinámicos y enlaces principales.
+ * Capa: Presentation / Components / Sections
+ */
+
+import { profileData } from '../../../infrastructure/data/profile.data';
+import SocialLinks from '../common/SocialLinks.astro';
+---
+
+<section class="home active" id="inicio" data-section-index="0">
+  <div class="home-detail">
+    <h1>{profileData.name}</h1>
+    <h2>
+      Soy
+      {
+        profileData.titles.map((title, idx) => {
+          // Índices inversos para la animación CSS de rotación (4, 3, 2, 1)
+          const animIndex = profileData.titles.length - idx;
+          return (
+            <span style={`--i:${animIndex};`} data-text={title}>
+              {title}
+            </span>
+          );
+        })
+      }
+    </h2>
+    <p>{profileData.headline}</p>
+
+    <div class="btn-sci">
+      <a
+        href={profileData.cvPdfPath}
+        download="CV-JorgeGamez.pdf"
+        class="btn"
+        aria-label="Descargar curriculum vitae en formato PDF"
+      >
+        Descargar CV
+      </a>
+      <SocialLinks links={profileData.socialLinks} />
+    </div>
+  </div>
+
+  <div class="home-img">
+    <div class="img-box">
+      <div class="img-item">
+        <img
+          src={profileData.avatarUrl}
+          alt={`Fotografía profesional de ${profileData.name}`}
+          loading="eager"
+        />
+      </div>
+    </div>
+  </div>
+</section>

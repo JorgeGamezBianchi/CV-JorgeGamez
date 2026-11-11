@@ -1,0 +1,22 @@
+---
+/**
+ * @file 404.astro
+ * @description Página de error 404 (No encontrado) estilizada y segura.
+ * Capa: Pages
+ */
+
+import Layout from '../presentation/layouts/Layout.astro';
+import BarsBackground from '../presentation/components/common/BarsBackground.astro';
+---
+
+<Layout title="404 - Página no encontrada | Jorge Gámez">
+  <BarsBackground />
+  <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; padding: 2rem;">
+    <h1 style="font-size: 8rem; color: var(--main-color); margin-bottom: 1rem;">404</h1>
+    <h2 style="font-size: 3rem; margin-bottom: 2rem;">Página no encontrada</h2>
+    <p style="font-size: 1.8rem; margin-bottom: 3rem; color: #ccc; max-width: 500px;">
+      La ruta que buscas no existe o ha sido movida. Puedes volver al inicio de forma segura.
+    </p>
+    <a href="/#/inicio" class="btn" style="padding: 1.2rem 3rem; font-size: 1.6rem;">Volver al Inicio</a>
+  </div>
+</Layout>

@@ -1,0 +1,40 @@
+---
+/**
+ * @file SkillsTab.astro
+ * @description Pestaña de habilidades técnicas clasificadas con devicons y badges/chips.
+ * Capa: Presentation / Components / Sections / About
+ */
+
+import { skillsData } from '../../../../infrastructure/data/skills.data';
+---
+
+<div class="about-detail skills" id="tab-skills" role="tabpanel">
+  <h2 class="heading">Mis <span>Habilidades</span></h2>
+
+  {
+    skillsData.map((category) => (
+      <div class="skills-group">
+        <h3 class="skills-title">{category.categoryName}</h3>
+
+        {category.skills && category.skills.length > 0 && (
+          <div class="about-list">
+            {category.skills.map((skill) => (
+              <div class="about-item">
+                {skill.deviconClass && <i class={skill.deviconClass} />}
+                <span>{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {category.chips && category.chips.length > 0 && (
+          <div class="skills-chips">
+            {category.chips.map((chip) => (
+              <span>{chip}</span>
+            ))}
+          </div>
+        )}
+      </div>
+    ))
+  }
+</div>

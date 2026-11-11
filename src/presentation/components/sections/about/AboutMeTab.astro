@@ -1,0 +1,45 @@
+---
+/**
+ * @file AboutMeTab.astro
+ * @description Pestaña con información personal, cálculo de edad y años de trayectoria profesional.
+ * Capa: Presentation / Components / Sections / About
+ */
+
+import { profileData } from '../../../../infrastructure/data/profile.data';
+import { formatAge, formatExperience } from '../../../../core/use-cases/calculateExperience';
+
+const initialAge = formatAge(profileData.details.birthDate);
+const initialExp = formatExperience(profileData.details.careerStartDate);
+---
+
+<div class="about-detail aboutMe" id="tab-aboutme" role="tabpanel">
+  <h2 class="heading">Sobre <span>Mí</span></h2>
+  <p class="desc">
+    {profileData.bioSummary}
+  </p>
+
+  <div class="about-list">
+    <div class="about-item">
+      <p>Nombre: <span>{profileData.details.fullName}</span></p>
+    </div>
+    <div class="about-item">
+      <p>Edad: <span id="age">{initialAge}</span></p>
+    </div>
+    <div class="about-item">
+      <p>Estado Civil: <span>{profileData.details.maritalStatus}</span></p>
+    </div>
+    <div class="about-item">
+      <p>Ciudad: <span>{profileData.details.location}</span></p>
+    </div>
+    <div class="about-item">
+      <p>Experiencia: <span id="experience">{initialExp}</span></p>
+    </div>
+    <div class="about-item">
+      <p>Freelance: <span>{profileData.details.isFreelanceAvailable ? 'Disponible' : 'No disponible'}</span></p>
+    </div>
+  </div>
+
+  <div class="aboutMe-btn">
+    <a href="#/contact" class="btn" id="contact-btn">Contáctame</a>
+  </div>
+</div>

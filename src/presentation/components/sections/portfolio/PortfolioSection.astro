@@ -1,0 +1,94 @@
+---
+/**
+ * @file PortfolioSection.astro
+ * @description Sección de Portfolio con carrusel interactivo y detalles de proyectos destacados.
+ * Capa: Presentation / Components / Sections / Portfolio
+ */
+
+import { projectsData } from '../../../../infrastructure/data/projects.data';
+---
+
+<section class="portfolio" id="portfolio" data-section-index="3">
+  <h2 class="heading">Último <span>Proyecto</span></h2>
+  
+  <div class="portfolio-container">
+    <!-- Columna Izquierda: Detalles del Proyecto Activo -->
+    <div class="portfolio-box">
+      {
+        projectsData.map((project, idx) => (
+          <div class={`portfolio-detail ${idx === 0 ? 'active' : ''}`} data-project-index={idx}>
+            <p class="numb">{project.number}</p>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            
+            <div class="tech">
+              <p>{project.technologies.join(', ')}</p>
+            </div>
+
+            <div class="live-github">
+              {project.liveUrl && (
+                <a
+                  href={project.liveUrl}
+                  target={project.liveUrl.startsWith('http') ? '_blank' : '_self'}
+                  rel={project.liveUrl.startsWith('http') ? 'noopener noreferrer' : ''}
+                  aria-label={`Ver proyecto en vivo: ${project.title}`}
+                >
+                  <i class="bx bx-arrow-back" />
+                  <span>Proyecto</span>
+                </a>
+              )}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Ver repositorio en GitHub: ${project.title}`}
+                >
+                  <i class="bx bxl-github" />
+                  <span>GitHub Repo</span>
+                </a>
+              )}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Columna Derecha: Diapositivas de Imágenes y Controles -->
+    <div class="portfolio-box">
+      <div class="portfolio-carousel">
+        <div class="img-slide">
+          {
+            projectsData.map((project) => (
+              <div class="img-item">
+                <img
+                  src={project.imageUrl}
+                  alt={project.imageAlt}
+                  loading="lazy"
+                />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Controles de Navegación del Carrusel -->
+      <div class="navigation">
+        <button
+          class="arrow-left disabled"
+          type="button"
+          aria-label="Proyecto anterior"
+        >
+          <i class="bx bx-chevron-left" />
+        </button>
+        <button
+          class="arrow-right"
+          type="button"
+          aria-label="Siguiente proyecto"
+        >
+          <i class="bx bx-chevron-right" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

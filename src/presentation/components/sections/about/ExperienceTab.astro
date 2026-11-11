@@ -1,0 +1,38 @@
+---
+/**
+ * @file ExperienceTab.astro
+ * @description Pestaña de experiencia laboral empresarial y trayectoria profesional.
+ * Capa: Presentation / Components / Sections / About
+ */
+
+import { experienceData } from '../../../../infrastructure/data/experience.data';
+---
+
+<div class="about-detail experiencie active" id="tab-experience" role="tabpanel">
+  <h2 class="heading">Mi <span>Experiencia</span></h2>
+  <p class="desc">
+    Tengo 4+ años desarrollando sistemas ERP y CRM empresariales con ASP.NET MVC, C#,
+    Entity Framework y SQL Server, lo que me ha dado experiencia directa en proyectos de alta
+    complejidad y criticidad operativa.
+    <br /><br />
+    Además, estoy en constante evolución: actualmente profundizo en Clean Architecture y CQRS para
+    escribir código más mantenible y escalable, y complemento mi perfil técnico con formación en
+    Habilidades Directivas, lo que me permite no solo programar, sino entender el impacto de negocio
+    detrás de cada solución.
+  </p>
+
+  <div class="about-list">
+    {
+      experienceData.map((job) => (
+        <div class="about-item">
+          <p class="year">{job.period}</p>
+          <h3>{job.role}</h3>
+          <p class="company">{job.company}</p>
+          <p>
+            {job.highlights.map((item) => `• ${item} `).join(' ')}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>

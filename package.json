@@ -1,0 +1,38 @@
+{
+  "name": "cv-jorgegamez",
+  "version": "2.0.0",
+  "description": "Portfolio profesional de Jorge Gámez Bianchi migrado a Astro con Clean Architecture y estándares de seguridad.",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "security:check": "node scripts/security-check.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgeGamezBianchi/CV-JorgeGamez.git"
+  },
+  "keywords": [
+    "portfolio",
+    "astro",
+    "clean-architecture",
+    "fullstack",
+    "dotnet",
+    "security"
+  ],
+  "author": "Jorge Gámez Bianchi",
+  "license": "MIT",
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/node": "^22.13.9",
+    "astro": "^7.4.10",
+    "typescript": "~5.7.3"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "sweetalert2": "^11.17.2"
+  }
+}
